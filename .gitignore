@@ -1,0 +1,4 @@
+###REF: https://www.toptal.com/developers/gitignore/ ###
+
+### Maven ###
+target/
