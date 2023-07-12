@@ -23,13 +23,13 @@ public class Recipe {
 		String createTime = Objects.nonNull(createdAt) ? fmt.format(createdAt) : "(null)";
 		String recipe = " ";
 		
-		recipe += "\n ID =" + recipeId;
-		recipe += "\n recipeName=" + recipeName;
-		recipe += "\n note=" + notes;
-		recipe += "\n numServings=" + numServings;
-		recipe += "\n prepTime=" + prepTime;
-		recipe += "\n cookTime=" + cookTime;
-		recipe += "\n createdAt=" + createTime;
+		recipe += "\n ID = " + recipeId;
+		recipe += "\n Recipe Name = " + recipeName;
+		recipe += "\n Notes = " + notes;
+		recipe += "\n Number of Servings = " + numServings;
+		recipe += "\n Prep Time = " + prepTime;
+		recipe += "\n Cook Time = " + cookTime;
+		recipe += "\n Created At = " + createTime;
 		
 		recipe += "\n Ingredients:";
 		

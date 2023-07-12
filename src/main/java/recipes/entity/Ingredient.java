@@ -8,7 +8,7 @@ import provided.entity.EntityBase;
 public class Ingredient extends EntityBase{
 	private Integer ingredientId;
 	private Integer recipe_id;
-	private unit unit;
+	private Unit unit;
 	private String ingredientName;
 	private String instruction;
 	private Integer ingredientOrder;
@@ -46,10 +46,10 @@ public class Ingredient extends EntityBase{
 	public void setRecipe_id(Integer recipe_id) {
 		this.recipe_id = recipe_id;
 	}
-	public unit getUnit() {
+	public Unit getUnit() {
 		return unit;
 	}
-	public void setUnit(unit unit) {
+	public void setUnit(Unit unit) {
 		this.unit = unit;
 	}
 	public String getIngredientName() {

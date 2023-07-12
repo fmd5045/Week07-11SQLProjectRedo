@@ -1,6 +1,6 @@
 package recipes.entity;
 
-public class unit {
+public class Unit {
 	public Integer getUnitId() {
 		return unitId;
 	}

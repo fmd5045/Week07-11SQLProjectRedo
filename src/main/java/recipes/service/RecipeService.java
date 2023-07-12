@@ -14,6 +14,12 @@ public class RecipeService {
 
 	private RecipeDao recipeDao = new RecipeDao();
 
+	public Recipe fetchRecipeById(Integer recipeId) {
+		return recipeDao.fetchRecipeById(recipeId)
+				.orElseThrow(() -> new NoSuchElementException("Recipe with ID=" + recipeId + "does not exist"));
+
+	}
+
 	public void createAndPopulateTables() {
 		loadFromFile(SCHEMA_FILE);
 		loadFromFile(DATA_FILE);
@@ -81,13 +87,14 @@ public class RecipeService {
 			throw new DbException(e);
 		}
 	}
-	
+
 	public Recipe addRecipe(Recipe recipe) {
 		return recipeDao.insertRecipe(recipe);
 
 	}
-	public static void main(String[] args) {
-		new RecipeService().createAndPopulateTables();
+
+	public List<Recipe> fetchRecipes() {
+		return recipeDao.fetchAllRecipes();
 	}
 
 }
