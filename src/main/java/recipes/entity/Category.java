@@ -18,7 +18,7 @@ public class Category {
 	}
 	@Override
 	public String toString() {
-		return "ID=" + categoryId + ", categoryName=" + categoryName;
+		return "ID = " + categoryId + ", categoryName = " + categoryName;
 	}
 
 }

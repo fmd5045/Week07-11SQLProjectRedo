@@ -31,7 +31,7 @@ public class Recipe {
 		recipe += "\n Cook Time = " + cookTime;
 		recipe += "\n Created At = " + createTime;
 		
-		recipe += "\n Ingredients:";
+		recipe += "\n Ingredients: ";
 		
 		for (Ingredient ingredient : ingredients) {
 			recipe += "\n		" + ingredient;

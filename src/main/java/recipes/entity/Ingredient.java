@@ -7,7 +7,7 @@ import provided.entity.EntityBase;
 
 public class Ingredient extends EntityBase{
 	private Integer ingredientId;
-	private Integer recipe_id;
+	private Integer recipeId;
 	private Unit unit;
 	private String ingredientName;
 	private String instruction;
@@ -18,7 +18,7 @@ public class Ingredient extends EntityBase{
 	public String toString() {
 		StringBuilder b = new StringBuilder();
 		
-		b.append("ID =").append(ingredientId).append(": ");
+		b.append("ID = ").append(ingredientId).append(": ");
 		b.append(toFraction(amount));
 		
 		if(Objects.nonNull(unit) && Objects.nonNull(unit.getUnitId())) {
@@ -40,11 +40,11 @@ public class Ingredient extends EntityBase{
 	public void setIngregredient_id(Integer ingregredient_id) {
 		this.ingredientId = ingregredient_id;
 	}
-	public Integer getRecipe_id() {
-		return recipe_id;
+	public Integer getRecipeId() {
+		return recipeId;
 	}
-	public void setRecipe_id(Integer recipe_id) {
-		this.recipe_id = recipe_id;
+	public void setRecipeId(Integer recipeId) {
+		this.recipeId = recipeId;
 	}
 	public Unit getUnit() {
 		return unit;
