@@ -5,9 +5,6 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
-
-import javax.naming.spi.ObjectFactoryBuilder;
-
 import recipes.entity.Category;
 import recipes.entity.Ingredient;
 import recipes.entity.Recipe;
@@ -97,7 +94,7 @@ public class Recipes {
 
 	private void deleteRecipe() {
 		listRecipes();
-		Integer recipeId =getIntInput("Enter the ID of the rcipe to delete");
+		Integer recipeId =getIntInput("Enter the ID of the recipe to delete");
 		
 		if(Objects.nonNull(recipeId)) {
 			recipeService.deleteRecipe(recipeId);

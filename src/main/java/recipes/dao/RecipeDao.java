@@ -1,7 +1,6 @@
 package recipes.dao;
 
 import java.math.BigDecimal;
-import java.nio.channels.NonReadableChannelException;
 import java.sql.*;
 import java.util.*;
 import provided.util.DaoBase;
@@ -322,6 +321,7 @@ public class RecipeDao extends DaoBase {
 		String sql = "INSERT INTO " + RECIPE_CATEGORY_TABLE + " (recipe_id, category_id) VALUES (?, " + subQuery + ")";
 		
 		try(Connection connection = DbConnection.getConnection()){
+			startTransaction(connection);
 			
 			try (PreparedStatement statement = connection.prepareStatement(sql)){
 				setParameter(statement, 1, recipeId, Integer.class);

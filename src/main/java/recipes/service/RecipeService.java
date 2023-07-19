@@ -5,9 +5,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
-
-import org.xml.sax.ext.DefaultHandler2;
-
 import recipes.exception.DbException;
 import recipes.dao.*;
 import recipes.entity.Category;
