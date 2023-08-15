@@ -23,9 +23,17 @@ public class Projects {
         "5) Delete a Project");
 	   //@formatter:on
 
+		private void createTables() {
+			projectService.createTables();
+			System.out.println("\nTables created!");
+
+		}
+	 	
 	public static void main(String[] args) {
+		new Projects().createTables();
 		new Projects().displayUserOptions();
 	}
+	
 
 	private void displayUserOptions() {
 		boolean done = false;
